@@ -1,18 +1,15 @@
 {
   "version": 2,
-  "builds": [
-    { "src": "api/*.js", "use": "@vercel/node" },
-    { "src": "*.html", "use": "@vercel/static" },
-    { "src": "data/*.txt", "use": "@vercel/static" }
-  ],
+  "functions": {
+    "api/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "routes": [
     { "src": "/api/chat",    "dest": "/api/chat.js" },
     { "src": "/api/unknown", "dest": "/api/unknown.js" },
     { "src": "/api/admin",   "dest": "/api/admin.js" },
     { "src": "/admin",       "dest": "/admin.html" },
     { "src": "/",            "dest": "/index.html" }
-  ],
-  "env": {
-    "ADMIN_PASSWORD": "bharat2024"
-  }
+  ]
 }
