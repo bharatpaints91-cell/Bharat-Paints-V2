@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bharat Paints — Admin Panel</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--navy:#1A2340;--saffron:#E8541A;--saffron2:#B83E0E;--saffron-light:#FDF0EB;--green:#1A6B3C;--green-light:#EAF5EE;--red:#DC2626;--red-light:#FEF2F2;--border:#E5E7EB;--gray:#6B7280;--white:#fff;--shadow:0 4px 20px rgba(26,35,64,.10);}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Poppins',sans-serif;background:#F1F5F9;min-height:100vh;}
+
+/* Login */
+.login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1A2340,#2d3a5e);}
+.login-card{background:white;border-radius:20px;padding:40px;width:340px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.25);}
+.login-card .logo{font-size:40px;margin-bottom:10px;}
+.login-card h2{font-size:20px;color:var(--navy);margin-bottom:5px;}
+.login-card p{font-size:13px;color:var(--gray);margin-bottom:24px;}
+.login-card input{width:100%;padding:12px 16px;border:1.5px solid var(--border);border-radius:10px;font-family:'Poppins',sans-serif;font-size:14px;outline:none;margin-bottom:12px;}
+.login-card input:focus{border-color:var(--saffron);}
+.login-btn{width:100%;padding:12px;background:linear-gradient(135deg,var(--saffron),var(--saffron2));color:white;border:none;border-radius:10px;font-family:'Poppins',sans-serif;font-size:15px;font-weight:600;cursor:pointer;}
+.login-err{color:var(--red);font-size:13px;margin-top:8px;display:none;}
+
+/* Layout */
+.layout{display:none;min-height:100vh;}
+.sidebar{width:220px;background:var(--navy);min-height:100vh;position:fixed;left:0;top:0;padding:20px 0;display:flex;flex-direction:column;}
+.sb-logo{padding:0 20px 20px;border-bottom:1px solid rgba(255,255,255,.1);}
+.sb-logo h2{color:white;font-size:15px;font-weight:700;}
+.sb-logo p{color:rgba(255,255,255,.5);font-size:11px;}
+.sb-nav{padding:16px 0;flex:1;}
+.sb-item{display:flex;align-items:center;gap:10px;padding:11px 20px;color:rgba(255,255,255,.7);font-size:13.5px;cursor:pointer;transition:all .16s;}
+.sb-item:hover,.sb-item.active{background:rgba(255,255,255,.1);color:white;}
+.sb-item .ic{font-size:17px;}
+.sb-logout{padding:16px 20px;border-top:1px solid rgba(255,255,255,.1);}
+.logout-btn{width:100%;padding:9px;background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.3);color:#fca5a5;border-radius:8px;font-family:'Poppins',sans-serif;font-size:13px;cursor:pointer;}
+
+.main{margin-left:220px;padding:24px;}
+.page{display:none;}
+.page.active{display:block;}
+
+/* Top bar */
+.topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px;}
+.topbar h1{font-size:20px;color:var(--navy);font-weight:700;}
+.badge{background:var(--saffron-light);color:var(--saffron2);font-size:12px;font-weight:600;padding:4px 10px;border-radius:20px;}
+
+/* Stats */
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px;}
+.stat-card{background:white;border-radius:14px;padding:18px;box-shadow:var(--shadow);}
+.stat-card .sc-icon{font-size:26px;margin-bottom:8px;}
+.stat-card .sc-val{font-size:28px;font-weight:700;color:var(--navy);}
+.stat-card .sc-label{font-size:12px;color:var(--gray);margin-top:3px;}
+
+/* Cards */
+.card{background:white;border-radius:14px;padding:20px;box-shadow:var(--shadow);margin-bottom:16px;}
+.card h3{font-size:15px;color:var(--navy);font-weight:600;margin-bottom:14px;}
+
+/* Unknown queries */
+.query-item{border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;background:#FAFAFA;}
+.query-item .q-text{font-size:14px;color:var(--navy);font-weight:500;}
+.query-item .q-meta{font-size:11.5px;color:var(--gray);margin-top:3px;}
+.query-item .q-actions{display:flex;gap:8px;margin-top:10px;}
+.btn{padding:7px 14px;border-radius:8px;font-family:'Poppins',sans-serif;font-size:12.5px;font-weight:600;cursor:pointer;border:none;}
+.btn-green{background:var(--green-light);color:var(--green);}
+.btn-red{background:var(--red-light);color:var(--red);}
+.btn-navy{background:var(--navy);color:white;}
+.btn-saffron{background:var(--saffron);color:white;}
+.btn-gray{background:#F3F4F6;color:var(--gray);}
+.empty-state{text-align:center;padding:30px;color:var(--gray);font-size:14px;}
+
+/* Answer modal */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:1000;align-items:center;justify-content:center;}
+.modal-overlay.open{display:flex;}
+.modal{background:white;border-radius:16px;padding:24px;width:500px;max-width:95vw;}
+.modal h3{font-size:16px;color:var(--navy);margin-bottom:6px;}
+.modal .q-preview{background:var(--saffron-light);color:var(--saffron2);padding:8px 12px;border-radius:8px;font-size:13px;margin-bottom:14px;}
+.modal textarea{width:100%;padding:11px 13px;border:1.5px solid var(--border);border-radius:10px;font-family:'Poppins',sans-serif;font-size:13.5px;resize:vertical;min-height:100px;outline:none;}
+.modal textarea:focus{border-color:var(--saffron);}
+.modal .m-actions{display:flex;gap:8px;margin-top:12px;justify-content:flex-end;}
+
+/* Editor */
+.file-tabs{display:flex;gap:8px;margin-bottom:14px;}
+.file-tab{padding:7px 14px;border-radius:8px;font-family:'Poppins',sans-serif;font-size:13px;font-weight:500;cursor:pointer;border:1.5px solid var(--border);background:white;color:var(--gray);}
+.file-tab.active{border-color:var(--saffron);background:var(--saffron-light);color:var(--saffron2);}
+.editor-area{width:100%;min-height:400px;padding:14px;border:1.5px solid var(--border);border-radius:10px;font-family:'Courier New',monospace;font-size:13px;color:var(--navy);outline:none;resize:vertical;line-height:1.6;}
+.editor-area:focus{border-color:var(--saffron);}
+.editor-hint{font-size:12px;color:var(--gray);margin-top:8px;line-height:1.6;}
+.save-bar{display:flex;align-items:center;gap:10px;margin-top:12px;}
+.save-msg{font-size:13px;color:var(--green);font-weight:500;display:none;}
+
+/* Toast */
+.toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:white;padding:12px 20px;border-radius:10px;font-size:13.5px;font-weight:500;z-index:9999;display:none;box-shadow:0 4px 20px rgba(0,0,0,.2);}
+
+@media(max-width:700px){
+  .sidebar{width:60px;}
+  .sb-logo,.sb-item span,.sb-logout{display:none;}
+  .main{margin-left:60px;padding:14px;}
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div class="login-wrap" id="loginWrap">
+  <div class="login-card">
+    <div class="logo">🔐</div>
+    <h2>Bharat Paints</h2>
+    <p>Admin Panel — Enter your password</p>
+    <input type="password" id="pwInput" placeholder="Enter password…" onkeydown="if(event.key==='Enter')doLogin()"/>
+    <button class="login-btn" onclick="doLogin()">Login →</button>
+    <div class="login-err" id="loginErr">❌ Wrong password. Try again.</div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="layout" id="layout">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <div class="sb-logo">
+      <h2>🎨 Bharat Paints</h2>
+      <p>Admin Panel</p>
+    </div>
+    <div class="sb-nav">
+      <div class="sb-item active" onclick="showPage('dashboard')"><span class="ic">📊</span><span>Dashboard</span></div>
+      <div class="sb-item" onclick="showPage('unknown')"><span class="ic">❓</span><span>Missed Queries</span></div>
+      <div class="sb-item" onclick="showPage('editor')"><span class="ic">✏️</span><span>Edit Data</span></div>
+      <div class="sb-item" onclick="window.open('/','_blank')"><span class="ic">💬</span><span>View Chatbot</span></div>
+    </div>
+    <div class="sb-logout">
+      <button class="logout-btn" onclick="doLogout()">Logout</button>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div class="main">
+    <div class="page active" id="page-dashboard">
+      <div class="topbar">
+        <h1>Dashboard</h1>
+        <span class="badge" id="lastUpdated">Loading…</span>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="sc-icon">💬</div><div class="sc-val" id="s-total">—</div><div class="sc-label">Total Chats</div></div>
+        <div class="stat-card"><div class="sc-icon">📅</div><div class="sc-val" id="s-today">—</div><div class="sc-label">Chats Today</div></div>
+        <div class="stat-card"><div class="sc-icon">🗂️</div><div class="sc-val" id="s-products">—</div><div class="sc-label">Products in DB</div></div>
+        <div class="stat-card"><div class="sc-icon">❓</div><div class="sc-val" id="s-unknown">—</div><div class="sc-label">Unanswered Qs</div></div>
+      </div>
+      <div class="card">
+        <h3>🚀 Quick Actions</h3>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn btn-saffron" onclick="showPage('unknown')">See Missed Queries</button>
+          <button class="btn btn-navy" onclick="showPage('editor')">Edit Data Files</button>
+          <button class="btn btn-gray" onclick="loadDashboard()">↻ Refresh</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>📋 How to make bot smarter</h3>
+        <ol style="padding-left:20px;font-size:13.5px;color:#374151;line-height:2;">
+          <li>Go to <strong>Missed Queries</strong> — see what customers asked that bot couldn't answer</li>
+          <li>Click <strong>"Add Answer"</strong> next to any question</li>
+          <li>Type the answer and click Save</li>
+          <li>Bot learns immediately — no deployment needed!</li>
+          <li>Or go to <strong>Edit Data</strong> to update prices or add new products</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Unknown Queries -->
+    <div class="page" id="page-unknown">
+      <div class="topbar">
+        <h1>Missed Queries <span id="unknownCount" class="badge">0</span></h1>
+        <button class="btn btn-red" onclick="clearAllUnknown()">Clear All</button>
+      </div>
+      <div class="card">
+        <p style="font-size:13px;color:var(--gray);margin-bottom:14px;">These are questions customers asked that the bot couldn't answer. Add answers to make the bot smarter!</p>
+        <div id="unknownList"><div class="empty-state">Loading…</div></div>
+      </div>
+    </div>
+
+    <!-- Data Editor -->
+    <div class="page" id="page-editor">
+      <div class="topbar"><h1>Edit Data Files</h1></div>
+      <div class="card">
+        <div class="file-tabs">
+          <button class="file-tab active" onclick="loadFile('faq.txt',this)">📋 FAQ</button>
+          <button class="file-tab" onclick="loadFile('products.txt',this)">💰 Products</button>
+          <button class="file-tab" onclick="loadFile('services.txt',this)">🛠️ Services</button>
+        </div>
+        <textarea class="editor-area" id="editorArea" spellcheck="false"></textarea>
+        <div class="editor-hint">
+          <strong>FAQ format:</strong> Q: your question &nbsp;|&nbsp; A: your answer &nbsp;·&nbsp;
+          <strong>Product format:</strong> Product Name | Size | Rs. Price &nbsp;·&nbsp;
+          Lines starting with # are comments.
+        </div>
+        <div class="save-bar">
+          <button class="btn btn-saffron" onclick="saveFile()">💾 Save Changes</button>
+          <button class="btn btn-gray" onclick="loadCurrentFile()">↻ Reload</button>
+          <span class="save-msg" id="saveMsg">✅ Saved!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Answer Modal -->
+<div class="modal-overlay" id="answerModal">
+  <div class="modal">
+    <h3>Add Answer for this Question</h3>
+    <div class="q-preview" id="modalQuestion"></div>
+    <textarea id="modalAnswer" placeholder="Type the answer here…"></textarea>
+    <div class="m-actions">
+      <button class="btn btn-gray" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-saffron" onclick="submitAnswer()">✅ Save & Teach Bot</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API_BASE = '/api';
+let adminKey = '';
+let currentFile = 'faq.txt';
+let modalQuery = '';
+
+// ── Auth ──────────────────────────────────────────────────────
+function doLogin(){
+  const pw = document.getElementById('pwInput').value.trim();
+  if(!pw){return;}
+  adminKey = pw;
+  loadDashboard().then(ok=>{
+    if(ok){
+      document.getElementById('loginWrap').style.display='none';
+      document.getElementById('layout').style.display='flex';
+    } else {
+      document.getElementById('loginErr').style.display='block';
+      adminKey='';
+    }
+  });
+}
+
+function doLogout(){
+  adminKey='';
+  document.getElementById('loginWrap').style.display='flex';
+  document.getElementById('layout').style.display='none';
+}
+
+// ── Navigation ────────────────────────────────────────────────
+function showPage(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.sb-item').forEach(i=>i.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  event.currentTarget && event.currentTarget.classList.add('active');
+  if(name==='unknown') loadUnknown();
+  if(name==='editor') loadFile('faq.txt', document.querySelector('.file-tab'));
+  if(name==='dashboard') loadDashboard();
+}
+
+// ── Toast ─────────────────────────────────────────────────────
+function showToast(msg, ms=3000){
+  const t=document.getElementById('toast');
+  t.textContent=msg;t.style.display='block';
+  setTimeout(()=>t.style.display='none',ms);
+}
+
+// ── Dashboard ─────────────────────────────────────────────────
+async function loadDashboard(){
+  try{
+    const r = await fetch(API_BASE+'/admin', {headers:{'x-admin-key':adminKey}});
+    if(r.status===401) return false;
+    const d = await r.json();
+    document.getElementById('s-total').textContent   = d.stats.totalChats;
+    document.getElementById('s-today').textContent   = d.stats.todayChats;
+    document.getElementById('s-products').textContent= d.stats.productCount;
+    document.getElementById('s-unknown').textContent = d.stats.unknownCount;
+    document.getElementById('lastUpdated').textContent = 'Updated '+new Date().toLocaleTimeString('en-IN');
+    return true;
+  }catch{return false;}
+}
+
+// ── Unknown Queries ───────────────────────────────────────────
+async function loadUnknown(){
+  const list = document.getElementById('unknownList');
+  list.innerHTML='<div class="empty-state">Loading…</div>';
+  try{
+    const r = await fetch(API_BASE+'/admin',{headers:{'x-admin-key':adminKey}});
+    const d = await r.json();
+    const qs = (d.unknownQueries||[]).filter(q=>!q.answered);
+    document.getElementById('unknownCount').textContent = qs.length;
+    if(!qs.length){list.innerHTML='<div class="empty-state">✅ No unanswered questions! Bot is fully trained.</div>';return;}
+    list.innerHTML = qs.map((q,i)=>`
+      <div class="query-item" id="qi-${i}">
+        <div class="q-text">"${escHtml(q.q)}"</div>
+        <div class="q-meta">Asked ${q.count}x · Last: ${new Date(q.last).toLocaleDateString('en-IN')}</div>
+        <div class="q-actions">
+          <button class="btn btn-green" onclick="openModal('${escJs(q.q)}')">✏️ Add Answer</button>
+          <button class="btn btn-gray" onclick="dismissQuery(${i})">Dismiss</button>
+        </div>
+      </div>`).join('');
+  }catch{list.innerHTML='<div class="empty-state">Error loading queries.</div>';}
+}
+
+async function clearAllUnknown(){
+  if(!confirm('Clear all missed queries?')) return;
+  await fetch(API_BASE+'/unknown?id=all',{method:'DELETE',headers:{'x-admin-key':adminKey}});
+  showToast('✅ All cleared!');
+  loadUnknown();
+}
+
+async function dismissQuery(i){
+  await fetch(API_BASE+'/unknown?id='+i,{method:'DELETE',headers:{'x-admin-key':adminKey}});
+  loadUnknown();
+}
+
+// ── Answer Modal ──────────────────────────────────────────────
+function openModal(q){
+  modalQuery=q;
+  document.getElementById('modalQuestion').textContent=q;
+  document.getElementById('modalAnswer').value='';
+  document.getElementById('answerModal').classList.add('open');
+  setTimeout(()=>document.getElementById('modalAnswer').focus(),100);
+}
+function closeModal(){document.getElementById('answerModal').classList.remove('open');}
+
+async function submitAnswer(){
+  const answer = document.getElementById('modalAnswer').value.trim();
+  if(!answer){showToast('Please type an answer first!');return;}
+  const r = await fetch(API_BASE+'/admin',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-admin-key':adminKey},
+    body:JSON.stringify({action:'add_faq',query:modalQuery,answer})
+  });
+  const d = await r.json();
+  if(d.success){closeModal();showToast('✅ Answer saved! Bot will now answer this question.');loadUnknown();}
+  else showToast('❌ Error: '+d.error);
+}
+
+// ── Data Editor ───────────────────────────────────────────────
+async function loadFile(filename, btn){
+  currentFile=filename;
+  document.querySelectorAll('.file-tab').forEach(t=>t.classList.remove('active'));
+  if(btn) btn.classList.add('active');
+  document.getElementById('editorArea').value='Loading…';
+  const r = await fetch(API_BASE+'/admin',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-admin-key':adminKey},
+    body:JSON.stringify({action:'read_file',file:filename})
+  });
+  const d = await r.json();
+  document.getElementById('editorArea').value = d.content || '';
+}
+
+function loadCurrentFile(){loadFile(currentFile);}
+
+async function saveFile(){
+  const content = document.getElementById('editorArea').value;
+  const r = await fetch(API_BASE+'/admin',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-admin-key':adminKey},
+    body:JSON.stringify({action:'save_file',file:currentFile,content})
+  });
+  const d = await r.json();
+  if(d.success){
+    const msg=document.getElementById('saveMsg');
+    msg.style.display='inline';
+    showToast('✅ '+currentFile+' saved! Changes are live immediately.');
+    setTimeout(()=>msg.style.display='none',3000);
+  } else showToast('❌ Save failed: '+(d.error||'unknown error'));
+}
+
+// ── Utils ─────────────────────────────────────────────────────
+function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+function escJs(s){return s.replace(/'/g,"\\'").replace(/"/g,'\\"');}
+
+document.getElementById('answerModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+</script>
+</body>
+</html>

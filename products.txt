@@ -1,0 +1,162 @@
+# BHARAT PAINTS — PRODUCT & PRICE DATA
+# Format: CATEGORY | PRODUCT NAME | DETAILS | PRICE
+# To update: just edit this file and save. Bot reads it automatically.
+# Lines starting with # are comments — ignored by bot.
+
+[INTERIOR_ECONOMY]
+Asian Tractor Emulsion Ultra White | 1 Lt | Rs. 180
+Asian Tractor Emulsion Ultra White | 10 Lt | Rs. 1,850
+Asian Tractor Emulsion Ultra White | 20 Lt | Rs. 3,200
+Asian Tractor Shyne White | 10 Lt | Rs. 1,850
+Asian Tractor Shyne White | 20 Lt | Rs. 3,400
+Asian Tractor Sparc Economy | 10 Lt | Rs. 1,150
+Asian Tractor Sparc Economy | 20 Lt | Rs. 1,950
+Asian Uno Distemper | 5 Kg | Rs. 280
+Asian Uno Distemper | 20 Kg | Rs. 850
+Dulux Crisp Line Distemper | 20 Kg | Rs. 880
+
+[INTERIOR_PREMIUM]
+Asian Apcolite Premium Emulsion White | 1 Lt | Rs. 330
+Asian Apcolite Premium Emulsion White | 4 Lt | Rs. 1,250
+Asian Apcolite Premium Emulsion White | 10 Lt | Rs. 2,900
+Asian Apcolite Premium Emulsion White | 20 Lt | Rs. 5,400
+Asian Apcolite Advance Pure White | 10 Lt | Rs. 3,450
+Asian Apcolite Advance Pure White | 20 Lt | Rs. 6,200
+Dulux A700 Interior Emulsion White | 20 Lt | Rs. 2,850
+
+[INTERIOR_LUXURY]
+Asian Royale Advance White | 1 Lt | Rs. 540
+Asian Royale Advance White | 4 Lt | Rs. 2,150
+Asian Royale Advance White | 10 Lt | Rs. 5,450
+Asian Royale Advance White | 20 Lt | Rs. 10,500
+Asian Royale Matt BR White | 1 Lt | Rs. 580
+Asian Royale Matt BR White | 4 Lt | Rs. 2,450
+Asian Royale Matt BR White | 10 Lt | Rs. 5,600
+Asian Royale Matt BR White | 20 Lt | Rs. 10,800
+Asian Royale Luxury Emulsion | 4 Lt | Rs. 2,250
+Asian Royale Luxury Emulsion | 10 Lt | Rs. 5,450
+Asian Royale Glitiz Gloss | 10 Lt | Rs. 5,850
+Asian Royale Glitiz Gloss | 20 Lt | Rs. 11,500
+
+[EXTERIOR]
+Asian Apex Classic White | 1 Lt | Rs. 330
+Asian Apex Classic White | 4 Lt | Rs. 1,250
+Asian Apex Classic White | 10 Lt | Rs. 3,250
+Asian Apex Classic White | 20 Lt | Rs. 5,400
+Asian Apex Ultra | 4 Lt | Rs. 1,350
+Asian Apex Ultra | 10 Lt | Rs. 3,600
+Asian Apex Ultra | 20 Lt | Rs. 6,600
+Asian Apex Ultima | 20 Lt | Rs. 8,500
+Asian Apex Ultima Stretch | 20 Lt | Rs. 9,300
+Asian Apex Shyne White | 4 Lt | Rs. 1,300
+Asian Apex Shyne White | 10 Lt | Rs. 3,250
+Asian Apex Shyne White | 20 Lt | Rs. 6,200
+Dulux E700 Exterior Emulsion | 20 Lt | Rs. 3,800
+Dulux E900 Exterior Emulsion | 20 Lt | Rs. 5,400
+Dulux Weathershield Power Flexx | 20 Lt | Rs. 9,800
+
+[WATERPROOFING]
+Dr. Fixit Roofseal Acrylate with PU | 20 Lt | Rs. 6,400
+Dr. Fixit Roof Seal Select | 20 Lt | Rs. 6,400
+Dr. Fixit 2K Chemical | 15 Kg | Rs. 1,850
+Dr. Fixit 2K Chemical | 30 Kg | Rs. 2,950
+Dr. Fixit Fast Flexx | 12 Kg | Rs. 1,950
+Dr. Fixit URP Chemical | 1 Lt | Rs. 330
+Dr. Fixit URP Chemical | 20 Lt | Rs. 4,600
+Dr. Fixit Primeseal | 20 Lt | Rs. 4,590
+Damp Block 2K Waterproof | 3 Kg | Rs. 450
+Damp Block 2K Waterproof | 15 Kg | Rs. 1,600
+Asian Smartcare Damp Proof White | 1 Lt | Rs. 350
+Asian Smartcare Hydroloc Clear | 1 Lt | Rs. 550
+Asian Smartcare Hydroloc Clear | 4 Lt | Rs. 1,650
+Asian Smartcare Dampsheath Exterior | 20 Lt | Rs. 3,650
+Asian Tile Coat Clear Waterproof | 4 Lt | Rs. 1,150
+Asian Tile Coat Clear Waterproof | 20 Lt | Rs. 5,750
+Dulux Aqua Tech Waterproof | 20 Lt | Rs. 5,800
+
+[WOOD_COATINGS]
+Asian Aquadur Exterior Clear Gloss | 4 Lt | Rs. 3,200
+Asian Aquadur Exterior Clear Matt | 4 Lt | Rs. 3,200
+Asian Aquadur Base Coat Sealer | 1 Lt | Rs. 550
+Asian Touchwood Glossy Clear | 1 Lt | Rs. 330
+Asian Suprema Melamyne Clear Gloss | 20 Lt | Rs. 4,850
+Asian Emporio Clear Gloss | 1 Lt | Rs. 1,250
+
+[INDUSTRIAL]
+APPG Epoxy Primer Grey | 4 Lt | Rs. 1,400
+APPG Epoxy Primer Grey | 20 Lt | Rs. 5,600
+APPG Epoxy HB Finish White | 20 Lt | Rs. 8,200
+APPG Epoxy HB Finish Golden Yellow | 20 Lt | Rs. 8,200
+APPG Epoxy Smoke Grey HB Finish | 20 Lt | Rs. 7,800
+APPG Apcothane CF675 White | 20 Lt | Rs. 9,800
+APPG Apcothane CF675 Smoke Grey | 20 Lt | Rs. 8,400
+APPG Aluminium Paint | 4 Lt | Rs. 1,250
+APPG Aluminium Paint | 20 Lt | Rs. 5,400
+APPG HR Silicon Aluminium Paint | 4 Lt | Rs. 2,250
+APPG HR Silicon Aluminium Paint | 20 Lt | Rs. 10,500
+APPG Apcomin Industrial Enamel White | 20 Lt | Rs. 4,800
+APPG Apcomin Redoxide Primer | 20 Lt | Rs. 2,450
+Berger PU Fine White Glossy | 11 Lt | Rs. 5,500
+Berger Epoxy HB Finish Phirozi | 20 Lt | Rs. 7,700
+Berger 610 Coating Grey Primer | 20 Lt | Rs. 7,200
+Berger Aluminium Paint | 20 Lt | Rs. 6,200
+
+[ENAMEL]
+Asian Apcolite Gloss Enamel Blazing White | 1 Lt | Rs. 270
+Asian Apcolite Gloss Enamel Blazing White | 4 Lt | Rs. 1,080
+Asian Apcolite Gloss Enamel Black | 1 Lt | Rs. 250
+Asian Apcolite Gloss Enamel Black | 20 Lt | Rs. 4,400
+Asian Apcolite Gloss Enamel Golden Yellow | 1 Lt | Rs. 270
+Asian Apcolite Gloss Enamel Golden Yellow | 20 Lt | Rs. 4,600
+Dulux Gloss Enamel Blazing White | 1 Lt | Rs. 290
+Dulux Gloss Enamel Blazing White | 20 Lt | Rs. 5,100
+Dulux Gloss Enamel Black | 1 Lt | Rs. 270
+Dulux Gloss Enamel Black | 20 Lt | Rs. 4,800
+British White Enamel | 20 Lt | Rs. 4,600
+British Smoke Grey Enamel | 20 Lt | Rs. 4,400
+
+[PUTTY_PRIMER]
+Asian Wall Putty | 20 Kg | Rs. 380
+Asian Wall Putty | 40 Kg | Rs. 600
+Asian Acrylic Wall Putty | 10 Kg | Rs. 650
+Asian Acrylic Wall Putty | 20 Kg | Rs. 1,250
+Asian Waterproof Wall Putty | 40 Kg | Rs. 1,250
+Dulux Acrylic Wall Putty | 20 Kg | Rs. 1,050
+Birla Wall Putty | 20 Kg | Rs. 400
+Birla Wall Putty | 40 Kg | Rs. 650
+Birla White Cement | 5 Kg | Rs. 140
+Asian Sparc Interior Wall Primer | 10 Lt | Rs. 950
+Asian Sparc Interior Wall Primer | 20 Lt | Rs. 1,450
+Asian Sparc Exterior Wall Primer | 10 Lt | Rs. 1,550
+Asian Sparc Exterior Wall Primer | 20 Lt | Rs. 2,600
+Asian Interior Wall Primer Advance | 10 Lt | Rs. 1,550
+Asian Interior Wall Primer Advance | 20 Lt | Rs. 2,650
+Asian Exterior Wall Primer Advance | 20 Lt | Rs. 3,450
+Asian Redoxide Primer | 4 Lt | Rs. 850
+Asian Redoxide Primer | 20 Lt | Rs. 2,650
+Asian Metal Primer Redoxide | 20 Lt | Rs. 3,450
+Asian Wood Primer White | 1 Lt | Rs. 250
+Asian Wood Primer White | 4 Lt | Rs. 890
+Dulux Exterior Acrylic Primer | 20 Lt | Rs. 3,450
+Dulux A500 Interior Sealer Primer | 20 Lt | Rs. 2,650
+British All Rounder Primer | 20 Lt | Rs. 2,250
+British Redoxide Primer | 20 Lt | Rs. 2,250
+
+[TEXTURE]
+Asian Apex Graniza Texture | 15 Kg | Rs. 8,000
+Asian Apex Graniza Texture | 30 Kg | Rs. 15,000
+Asian Apex Ultima Allura Italian | 25 Kg | Rs. 14,000
+
+[TOOLS_ACCESSORIES]
+Paint Brush 1 inch | 1 Pc | Rs. 10
+Paint Brush 2 inch | 1 Pc | Rs. 20
+Paint Brush 3 inch | 1 Pc | Rs. 40
+Paint Brush 4 inch | 1 Pc | Rs. 90
+Paint Brush 5 inch | 1 Pc | Rs. 120
+Asian Roller 9 inch Advance | 1 Pc | Rs. 120
+Asian Roller 9 inch Royal | 1 Pc | Rs. 160
+Asian Masking Tape 1 inch | 1 Pc | Rs. 20
+Asian Masking Tape 2 inch Roll | 1 Pc | Rs. 130
+Asian Emery Paper 150 No. | 1 Pc | Rs. 15
+Asian Emery Paper 220 No. | 1 Pc | Rs. 15
+Asian Emery Roll 120 No. | 1 Mt | Rs. 40

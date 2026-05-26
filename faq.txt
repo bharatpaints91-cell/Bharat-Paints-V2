@@ -1,0 +1,115 @@
+# BHARAT PAINTS — FAQ DATA
+# Format: Q: your question | A: your answer
+# Add new Q&A pairs anytime. Bot learns immediately.
+# Lines starting with # are comments.
+
+Q: Where is Bharat Paints located?
+A: SCO 30, Bhagat Singh Market, Railway Road, Karnal 132001. Easy to find — right on Railway Road.
+
+Q: What are your shop timings?
+A: Monday to Saturday 9:30 AM to 7:30 PM. Sunday shop is closed but you can order on WhatsApp and we deliver Monday morning.
+
+Q: Are you open on Sunday?
+A: Shop is closed on Sunday. But WhatsApp orders on Sunday get delivered Monday morning with a FREE brush and roller as bonus!
+
+Q: Which brands do you stock?
+A: Asian Paints, Dulux AkzoNobel, GIO Paints, Nerolac, Asian PPG Industrial, Berger Industrial, Kupsa Wood Coatings, Dr. Fixit, Zydex Mineral Paints, British Paints, Birla Putty. All 100% genuine with GST bill and warranty.
+
+Q: Are you an authorised dealer?
+A: Yes. We are authorised dealer for Asian Paints, Dulux, GIO Paints, Nerolac, Berger, Dr. Fixit and Zydex. All products genuine with manufacturer warranty and proper GST bill.
+
+Q: What is the best interior paint?
+A: Asian Royale Advance is our top seller — washable, anti-fungal, low VOC, rich finish. Best for bedrooms and living rooms. For budget projects Tractor Emulsion Ultra is most popular.
+
+Q: Which paint is best for bedroom?
+A: Matt finish is best for bedrooms — Asian Royale Matt gives a rich, luxury look and hides wall imperfections. Anti-fungal and low VOC — safe for family.
+
+Q: Which paint is best for hall or living room?
+A: Silk or sheen finish works best — Asian Apcolite Premium or Asian Royale Advance. Bright look, easy to clean, long lasting.
+
+Q: Which paint for kitchen?
+A: Asian Royale Advance — washable and anti-fungal. Best for kitchens where grease and moisture are common. Apply over waterproof primer for best result.
+
+Q: Which paint for bathroom walls?
+A: Use anti-fungal emulsion as topcoat with waterproof primer base. We recommend Asian Royale Advance over Dr. Fixit primer coat.
+
+Q: What is the difference between matt and silk finish?
+A: Matt finish has no shine — hides wall imperfections, luxury look, best for bedrooms. Silk finish has slight sheen — easy to clean, bright look, best for halls and offices.
+
+Q: How much area does one bucket cover?
+A: One 20 litre bucket covers 1000 sq ft in 2 coats. Average bedroom with 120 sq ft walls needs about 2 to 3 litres for 2 coats.
+
+Q: How many coats are needed?
+A: 2 to 3 coats recommended for best finish and true colour. Always apply primer first.
+
+Q: Do you give discount on bulk order?
+A: Yes. Special pricing for orders above Rs. 10,000. WhatsApp us directly for best rate.
+
+Q: Do you provide free delivery?
+A: Yes. Free delivery in Karnal for orders above Rs. 10,000. Same day delivery for orders placed before 3 PM.
+
+Q: What is the online order offer?
+A: Order on WhatsApp or Instagram and get FREE brush and roller with every order. This offer is only for online orders.
+
+Q: Do you do colour consultancy?
+A: Yes — completely free! Visit shop or WhatsApp photos of your room. We suggest best colours based on your space, lighting and preference.
+
+Q: Do you provide shade cards?
+A: Yes. Physical shade cards available at our shop for all brands. Online shade pickers available for Asian Paints, Dulux and Nerolac.
+
+Q: What is Duco finish?
+A: Duco is a premium spray paint finish for wood and MDF. Smooth, hard, washable surface. Available in any colour from RAL and NCS shade cards. Popular for kitchen cabinets, modular furniture and doors.
+
+Q: What is PU coating for wood?
+A: PU (Polyurethane) is a hard, durable topcoat for wood. Available in Matt, Satin and Gloss finish. Waterproof, scratch resistant, long lasting. Must apply Epoxy Clear Sealer first.
+
+Q: What is Epoxy Clear Sealer?
+A: Epoxy Clear Sealer is applied on wood before PU coating. It seals the wood grain and gives PU a strong base to bond with. Skipping this step causes PU to peel — very important first step.
+
+Q: My roof leaks in monsoon — what should I do?
+A: Book a free site visit immediately. We inspect the terrace, diagnose the exact cause and apply correct waterproofing system. Terrace waterproofing takes 2 to 3 days. 5 to 10 year guarantee available with Dr. Fixit.
+
+Q: Dampness is coming on my wall — what to do?
+A: Dampness needs proper diagnosis first — could be roof leak, rising damp or plumbing issue. Book free site visit — our team identifies root cause and gives permanent solution with guarantee.
+
+Q: Paint is peeling after application — what to do?
+A: Peeling is caused by poor surface preparation or wrong primer. Our painting service includes proper surface prep and correct primer. Book a free site visit and we inspect at no cost.
+
+Q: How do I know if paint is genuine or duplicate?
+A: Buy only from authorised dealers like Bharat Paints. Check hologram and batch number on can. We provide GST bill with every purchase — proof of genuine product.
+
+Q: Your rate is higher than other paint shops.
+A: We use 100% genuine branded products with GST bills and warranty. Cheaper shops often sell duplicate or diluted paint which costs more to repaint sooner. Tell us your budget — we always find the best solution within your range.
+
+Q: The colour on my wall does not match the shade card.
+A: Common reasons are lighting when viewing card, fewer coats applied, or surface porosity. Apply 2 to 3 coats for true colour. View shade card in natural daylight. Send us a photo and we resolve immediately.
+
+Q: Paint smell is too strong inside house.
+A: Switch to Asian Royale Advance — low VOC, minimal odour, safe for family. Ensure good ventilation during and after painting for 2 to 3 days.
+
+Q: I am not satisfied with the painting work.
+A: Your satisfaction is our priority. WhatsApp us photos of the issue immediately. We inspect within 24 hours and resolve at no extra cost.
+
+Q: Which exterior paint is best for Karnal climate?
+A: Dulux Weathershield or Asian Apex Ultima — both handle Karnal summers, winters and monsoon perfectly. UV resistant and weatherproof with 8 to 10 year warranty.
+
+Q: What is Zydex mineral paint?
+A: Zydex is a natural silicate based mineral coating — breathable, eco friendly, extremely durable. Used on famous monuments worldwide. Safe for homes, children and environment. Available exclusively at Bharat Paints Karnal.
+
+Q: What is Asian Royale Play texture?
+A: Premium decorative texture range from Asian Paints. Available for interior and exterior walls. Multiple patterns including sand finish, Venetian plaster, 3D texture and metallic finish. Very popular for living rooms and feature walls.
+
+Q: What paint for rice mill machinery?
+A: APPG Epoxy 1K Grey Primer as base coat, then APPG Epoxy HB Finish or PU topcoat. Protects against moisture, rice dust and corrosion. 5 to 7 year life. Free site visit and quote available.
+
+Q: What paint for factory floor?
+A: APPG Epoxy Floor Coating — chemical resistant, abrasion resistant, easy to clean. Available in grey, green and red colours. Share floor area for exact quote.
+
+Q: What is the difference between KUPSA and other wood coating brands?
+A: Kupsa offers technical site visits, products are very thick so have more coverage and require more thinner to dilute. Professional spray finishing available at our workshop.
+
+Q: How fast can you start painting work?
+A: For urgent jobs we can mobilise team within 24 to 48 hours. Full 2BHK takes about 10 days for proper professional finish including putty, primer and paint coats.
+
+Q: How do I place an order?
+A: Three ways — visit shop at SCO 30 Railway Road Karnal, WhatsApp us with product and quantity, or Instagram DM. Online orders get FREE brush and roller!

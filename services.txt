@@ -1,0 +1,56 @@
+# BHARAT PAINTS — SERVICES DATA
+# Edit this file to update services, rates, and details.
+
+[PAINTING_SERVICE]
+name: Interior & Exterior Painting
+area: Karnal only
+rate_min: Rs. 20 per sq ft
+rate_max: Rs. 60 per sq ft
+team: 50+ trained painters, 5 specialist contractors
+duration_2bhk: 10 days approx
+includes: Surface preparation, wall putty, primer coat, 2-3 paint coats, post-work cleaning and handover
+site_visit: Free — no charges for estimate
+urgent: Team mobilised within 24-48 hours for urgent jobs
+
+[WATERPROOFING_SERVICE]
+name: Waterproofing Treatment
+area: Karnal only
+rate_min: Rs. 20 per sq ft
+rate_max: Rs. 60 per sq ft
+terrace_1000sqft_approx: Rs. 25,000 to Rs. 60,000 including material and labour
+guarantee_basic: 1 year
+guarantee_standard: 5 years
+guarantee_premium: 10 years
+brands_used: Dr. Fixit, Asian Paints — company backed guarantee
+site_visit: Free inspection and diagnosis
+
+[WOOD_COATING_SERVICE]
+name: Wood Coating & Duco Finishing
+area: Karnal — at our workshop or customer site
+workshop: Yes, we have our own spray finishing workshop in Karnal
+finishes: Matt, Satin, Gloss, Duco (any RAL or NCS colour)
+suitable_for: Furniture, doors, MDF, kitchen cabinets, modular furniture, stairs
+quote: WhatsApp photos of furniture for exact quote
+
+[COLOUR_CONSULTANCY]
+name: Free Colour Consultancy
+cost: Free
+method_1: Visit shop — physical shade cards available for all brands
+method_2: WhatsApp room photos — we suggest best colours based on lighting and space
+shade_cards_online: Asian Paints https://www.asianpaints.com/colours | Dulux https://www.dulux.in/en/colour-picker | Nerolac https://www.nerolac.com/colourspace
+
+[INDUSTRIAL_SERVICE]
+name: Industrial Painting Service
+area: Karnal only
+scope: Factory floors, machinery, walls, roofs, steel structures
+rate: Rs. 20 to Rs. 60 per sq ft depending on surface and product
+site_visit: Free for industrial projects
+bulk_pricing: Available — WhatsApp for quote
+
+[DELIVERY]
+free_delivery_above: Rs. 10,000 order value
+delivery_area: Karnal city
+same_day: Orders placed before 3 PM
+next_day: Orders placed after 3 PM
+sunday_orders: Delivered Monday morning
+online_offer: FREE brush and roller with every WhatsApp or Instagram order

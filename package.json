@@ -1,0 +1,13 @@
+{
+  "name": "bharat-paints-chatbot",
+  "version": "2.0.0",
+  "description": "Bharat Paints AI Chatbot — Karnal",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
